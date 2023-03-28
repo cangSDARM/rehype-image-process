@@ -1,0 +1,50 @@
+{
+  "name": "@allen/rehype-image-process",
+  "version": "1.0.0-beta.0",
+  "description": "A [rehype](https://rehype.js.org/) plugin for processing image nodes to add blur effect and width/height in compile time",
+  "author": "Allen Lee<648384410li@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cangSDARM/rehype-image-process.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cangSDARM/rehype-image-process/issues"
+  },
+  "homepage": "https://github.com/cangSDARM/rehype-image-process#readme",
+  "funding": "https://github.com/sponsors/cangSDARM",
+  "keywords": [
+    "rehype",
+    "rehype-plugin",
+    "unified",
+    "image",
+    "blur",
+    "nextjs"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "prepack": "tsc --noEmit false",
+    "test": "echo \"no test yet\""
+  },
+  "dependencies": {
+    "plaiceholder": "^2.5.0",
+    "unist-util-visit": "^4.1.2"
+  },
+  "devDependencies": {
+    "unified": "^10.0.0",
+    "@types/mdast": "^3.0.0",
+    "@types/node": "*",
+    "eslint": "^8.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "^4.0.0"
+  }
+}
