@@ -53,7 +53,7 @@ function rehypeImageProcess(options: RehypeImageProcessOption) {
         return;
       }
 
-      const transformedSrc = node.properties.src || options.srcTransform?.(node.properties.src);
+      const transformedSrc = options.srcTransform?.(node.properties.src) || node.properties.src;
 
       // return the new props we'll need for our image
       const { width, height, blurDataURL } = await returnProps(transformedSrc);
