@@ -1,4 +1,4 @@
-# @allen/rehype-image-process
+# @allenlee/rehype-image-process
 
 A [rehype](https://rehype.js.org/) plugin for processing image nodes to add blur effect and
 width/height in compile time
@@ -9,10 +9,8 @@ The idea behind this plugin: https://ironeko.com/posts/how-to-blurred-images-on-
 
 ## Installation
 
-**Not available yet**
-
 ```sh
-npm install @allen/rehype-image-process
+npm install @allenlee/rehype-image-process
 ```
 
 ## Options
@@ -36,7 +34,7 @@ npm install @allen/rehype-image-process
 ### Source
 
 ```ts
-const rehypeImageProcess = require('@allen/rehype-image-process');
+const rehypeImageProcess = require('@allenlee/rehype-image-process');
 
 rehype().use(rehypeImageProcess).process(`
 ![some alt](/cat.jpg)
@@ -58,6 +56,7 @@ dog.jpg
   placeholder="blur"
 />
 
+<!-- if you have some plugin can transform the image directly -->
 <img
   src="/dog.jpg"
   alt="/dog.jpg"
