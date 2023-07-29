@@ -47,13 +47,13 @@ function rehypeImageProcess(options: RehypeImageProcessOption) {
   }
 
   async function addProps(node: RehypeNode, options: RehypeImageProcessOption) {
+    const transformedSrc: string = options.srcTransform?.(node.properties.src) || node.properties.src;
+
     try {
       if (!node.properties) {
         node.properties = {};
         return;
       }
-
-      const transformedSrc = options.srcTransform?.(node.properties.src) || node.properties.src;
 
       // return the new props we'll need for our image
       const { width, height, blurDataURL } = await returnProps(transformedSrc);
@@ -71,7 +71,7 @@ function rehypeImageProcess(options: RehypeImageProcessOption) {
       node.properties[options.placeholderPropertyName || 'placeholder'] = 'blur';
     } catch (e) {
       // @ts-ignore
-      throw Error(`Invalid image with src: "${node.properties.src}"`, {
+      throw Error(`Invalid image with src: "${transformedSrc}"`, {
         cause: e,
       });
     }

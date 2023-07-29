@@ -1,6 +1,6 @@
 {
   "name": "@allenlee/rehype-image-process",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A [rehype](https://rehype.js.org/) plugin for processing image nodes to add blur effect and width/height in compile time",
   "author": "Allen Lee<648384410li@gmail.com>",
   "license": "MIT",
